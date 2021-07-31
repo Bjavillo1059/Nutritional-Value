@@ -5,22 +5,29 @@
 ## Description
 
 <!-- Title Bar  
-    - Title box Jumbotron 
-    - search function
-    - description of how the site works (about me)
-    - add a start button to input a item field
-    - what information does the site display
+// - Title box Jumbotron 
+// - search function
+// drop donw menu with searchable functions of specific items
+//    - Meat - commonly used item in recipe
+//    - Fruits/Veggies - commonly used item in recipe
+//    - Serving Size
+//    - Ingredients list
+//          - query to recipe site
+// 
 
-        - pulls up previous searches
-        - pulls up common popular foods
+// - description of how the site works (about me)
+// - what information does the site display
 
-        - weight
-        - lipids (fats)
-        - protein
-        - carbohydrates
-        - total caloric value
+//     - pulls up previous searches
+//     - pulls up common popular foods
 
-    - 
+//     - weight
+//     - lipids (fats)
+//     - protein
+//     - carbohydrates
+//           - fiber
+//     - total caloric value
+
     -->
 
 ## Deployment
