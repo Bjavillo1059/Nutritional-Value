@@ -1,36 +1,247 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation | Welcome</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"
-        integrity="sha512-9cXmvmK1gIDw3Tol6Xg/1SUls/CvBMgedu1aDjT519sQzy7jk+LoezyQqlzClW2LgXww4xEyuqtofg7PtWteLQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.3/js/foundation.min.js"
+    integrity="sha512-9cXmvmK1gIDw3Tol6Xg/1SUls/CvBMgedu1aDjT519sQzy7jk+LoezyQqlzClW2LgXww4xEyuqtofg7PtWteLQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- Compressed CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
-        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+  <!-- Compressed CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+    integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
 
-    <!-- Compressed JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
-        integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
+  <!-- Compressed JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
+    integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
 
 
-    <title>Nutrition Value</title>
+  <title>Nutrition Value</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
 
 </head>
 
 <body>
 
 
+  <!-- Start Top Bar -->
+  <div class="top-bar">
+    <div class="row">
+      <div class="top-bar-left">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li class="menu-text">Nutrition Value</li>
+          <li class="has-submenu">
+            <a href="#">Types of food</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a
+                  href="https://en.wikipedia.org/wiki/Veganism#:~:text=Veganism%20is%20the%20practice%20of,the%20commodity%20status%20of%20animals.&text=Dietary%20vegans%2C%20also%20known%20as,any%20other%20animal%2Dderived%20substances.">Veganism</a>
+              </li>
+              <li><a href="https://en.wikipedia.org/wiki/Vegetarianism">Vegetarianism</a></li>
+              <li><a href="https://pubmed.ncbi.nlm.nih.gov/30770584/">Emotional Feeding</a></li>
+              <li><a href="https://medlineplus.gov/ency/article/002458.htm">Sports Nutrition</a></li>
+              <li><a href="https://www.cdc.gov/healthyweight/healthy_eating/index.html">Healthy Eating</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#" class="disabled" >Types of Nutrition</a></li> -->
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="dropdown menu" data-dropdown-menu>
+          <li type="list" class="has-submenu" placeholder="Click on item">
+            <a href="#">Five Food Groups</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a
+                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and">Meats/Poultry</a>
+              </li>
+              <li><a
+                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans"
+                  alt="veg-info">Vegetables, Legumes/Beans</a></li>
+              <li><a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit">Fruit</a></li>
+              <li><a
+                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre">Grain</a>
+              </li>
+              <li><a
+                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat">Dairy</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- End Top Bar -->
+  <br>
+  <!-- You can now combine a row and column if you just need a 12 column row -->
+  <div class="row columns">
+    <nav aria-label="You are here:" role="navigation">
+
+      <ul class="breadcrumbs">
+        <li> <a href="#">Overview</a> </li>
+
+        <li>
+          <a href="#">Specific Type of Nutrient</a>
+          <label>
+            <select>
+              <option value="husker">Carbohydrates</option>
+              <option value="starbuck">Proteins</option>
+              <option value="hotdog">Fats</option>
+              <option value="apollo">Vitamins</option>
+              <option value="apollo">Minerals</option>
+            </select>
+          </label>
+        </li>
+
+        </li>
+      </ul>
+
+    </nav>
+  </div>
+
+  <div class="row">
+    <div class="medium-6 columns">
+      <img class="thumbnail" src="https://placehold.it/650x350">
+      <div class="row small-up-4">
+        <div class="column">
+          <img class="thumbnail" src="https://placehold.it/250x200">
+        </div>
+        <div class="column">
+          <img class="thumbnail" src="https://placehold.it/250x200">
+        </div>
+        <div class="column">
+          <img class="thumbnail" src="https://placehold.it/250x200">
+        </div>
+        <div class="column">
+          <img class="thumbnail" src="https://placehold.it/250x200">
+        </div>
+      </div>
+    </div>
+    <div class="medium-6 large-5 columns">
+      <h3>Find The Value of Food Source</h3>
+      <p>Health conscious users are often frustrated by the effort it takes to easily determine the nutrition value of
+        their food. Search a specific food item and get all the info you need to make a healthy choice.
+      </p>
+
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="middle-label" class="middle">Quantity</label>
+        </div>
+        <div class="small-9 columns">
+          <input type="text" id="middle-label" placeholder="Item you are searching for...">
+        </div>
+      </div>
+
+      <a href="#" class="button large expanded">Search for Info</a>
+
+    </div>
+
+    <div class="column row">
+      <hr>
+      <ul class="tabs" data-tabs id="example-tabs">
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Reviews</a></li>
+        <li class="tabs-title"><a href="#panel2">Recipes for item chosen</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          <h4>Reviews</h4>
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              <img class="thumbnail" src="https://placehold.it/200x200">
+            </div>
+            <div class="media-object-section">
+              <h5>Reviewers Name</h5>
+              <p>.....</p>
+            </div>
+          </div>
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              <img class="thumbnail" src="https://placehold.it/200x200">
+            </div>
+            <div class="media-object-section">
+              <h5>Reviewers Name</h5>
+              <p>.....</p>
+            </div>
+          </div>
+          <div class="media-object stack-for-small">
+            <div class="media-object-section">
+              <img class="thumbnail" src="https://placehold.it/200x200">
+            </div>
+            <div class="media-object-section">
+              <h5>Reviewers Name</h5>
+              <p>.....</p>
+            </div>
+          </div>
+          <label>
+            My Review
+            <textarea placeholder="None"></textarea>
+          </label>
+          <button class="button">Submit Review or Recipe</button>
+        </div>
+        <div class="tabs-panel" id="panel2">
+          <div class="row medium-up-3 large-up-5">
+            <div class="column">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product</h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod
+                semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="column">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product</h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod
+                semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="column">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product</h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod
+                semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="column">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product</h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod
+                semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+            <div class="column">
+              <img class="thumbnail" src="https://placehold.it/350x200">
+              <h5>Other Product</h5>
+              <p>In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod
+                semper, magna diam.</p>
+              <a href="#" class="button hollow tiny expanded">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row column">
+      <hr>
+      <ul class="menu">
+        <li>Nutrition Value</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="float-right">Copyright 2021</li>
+      </ul>
+    </div>
 
 
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 </body>
 
 </html>
