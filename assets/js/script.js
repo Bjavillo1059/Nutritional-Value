@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 $(document).foundation();
-=======
->>>>>>> 827d178959612030645352f615dc1f36c521d5f4
 
 var selectedItem = $('#dropdown-nutrient');
 var overviewOp = $('#overview');
@@ -11,45 +8,37 @@ var fatsOp = $('#fats');
 var vitamins = $('#vitamins');
 var itemValueId = $('#item-value');
 
-function getApi() {
-    var reqNutirixUrl = 'https://www.nutritionix.com/database';
+async function getNutritionApi() {
+  let nutritionAppId = "8badfcd6"
+  let nutritionApiKey = '7bbd96e0c6fe2d09ae1c6f6d6d1b81c3'
+  let reqNutirixUrl = await fetch(`https://www.nutritionix.com/database/common-foods?app_id=${nutritionAppId}&app_key=${nutritionApiKey}&q=error`);
+  console.log(reqNutirixUrl)
+  let nutrientData = await reqNutirixUrl.json()
+  console.log(nutrientData)
+  useNutritionixAPI(nutrientData)
+}
 
-    fetch(reqNutirixUrl)
-    .then(res => res.json())
-    .then(data => console.log(data))
-    // .then(function (response) {
-    //   return response.json();
-    // })
-    // .then(function (data) {
-    //   for (var i = 0; i < data.length; i++) {
-    //     var listItem = carbsOp + itemValueId;
-    //     listItem.textContent = data[i].html_url;
-    //     carbsOp.appendChild(listItem);
-    //   }
-    // });
-<<<<<<< HEAD
-=======
-
->>>>>>> 827d178959612030645352f615dc1f36c521d5f4
+function useNutritionixAPI(nutrientData) {
+  document.querySelector('#nutrient-results')
 }
 
 
-let inputEl = document.querySelector('.search-input')
+let inputEl = document.querySelector('#middle-label')
 let searchButton = document.querySelector("#search")
 
 
 //Event listener for the search button
 searchButton.addEventListener("click", () => {
   console.log("button pressed")
-  sendApiRequest()
+  sendApiRequest(inputEl.value)
 })
 
 
 //API request from Edamam.com
-async function sendApiRequest() {
+async function sendApiRequest(search) {
   let APP_ID = "fd634ac0"
   let API_KEY = "3d340a87803709d247b5368e6f03062c"
-  let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=spaghetti`);
+  let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${search}`);
   console.log(response)
   let data = await response.json()
   console.log(data)
@@ -57,7 +46,7 @@ async function sendApiRequest() {
 }
 
 
-//Recipes resluls API data
+//Recipes results API data
 function useApiData(data) {
   document.querySelector('#results').innerHTML = `
     <div class="grid-container">

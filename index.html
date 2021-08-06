@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foundation | Welcome</title>
+
   <!-- Compressed CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
@@ -88,6 +88,7 @@
 
       <ul class="breadcrumbs">
         <li> <a href="#">Overview</a> </li>
+        <div id="nutrient-results">Nutrient Results</div>
 
         <li>
           <a href="#">Specific Type of Nutrient</a>
@@ -128,86 +129,49 @@
               <div class="small-3 columns">
                 <label for="middle-label" class="middle">Item of Value</label>
               </div>
-
-              <div class="small-9 columns">
-                <input type="text" classs="search-input" id="middle-label search-input"
-                  placeholder="Item you are searching for...">
-              </div>
             </div>
 
             <a href="#" class="button large expanded" id="search">Search for Info</a>
           </div>
         </div>
+      </div>
 
 
-        <div class="column row">
-          <hr>
-          <ul class="tabs" data-tabs id="example-tabs">
-            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Reviews</a></li>
-            <li class="tabs-title text-start"><a href="#panel2">Recipes for item chosen</a></li>
-          </ul>
-          <div class="tabs-content" data-tabs-content="example-tabs">
-            <div class="tabs-panel is-active" id="panel1">
-              <h4>Reviews</h4>
-              <div class="media-object stack-for-small">
-                <div class="media-object-section">
-                </div>
-                <div class="media-object-section">
-                  <h5>Reviewers Name</h5>
-                  <p>.....</p>
-                </div>
-              </div>
-              <div class="media-object stack-for-small">
-                <div class="media-object-section">
-                </div>
-                <div class="media-object-section">
-                  <h5>Reviewers Name</h5>
-                  <p>.....</p>
-                </div>
-              </div>
-              <div class="media-object stack-for-small">
-                <div class="media-object-section">
-                </div>
-                <div class="media-object-section">
-                  <h5>Reviewers Name</h5>
-                  <p>.....</p>
-                </div>
-              </div>
-              <label>
-                My Review
-                <textarea placeholder="None"></textarea>
-              </label>
-              <button class="button">Submit Review or Recipe</button>
+      <div class="column row">
+        <hr>
+        <ul class="tabs" data-tabs id="example-tabs">          
+          <li class="tabs-title text-start"><a href="#panel2">Recipes for item chosen</a></li>
+        </ul>
+        <div class="tabs-content" data-tabs-content="example-tabs">
+          <div class="tabs-panel" id="panel2">
+            <div class class="row medium-up-3 large-up-5">
+              <div id="results">recipes</div>
             </div>
-            <div class="tabs-panel" id="panel2">
-              <div class class="row medium-up-3 large-up-5">
-                <div id="results">recipes</div>
-              </div>
-            </div>
-
           </div>
+
         </div>
       </div>
+    </div>
 
-      <div class="row column">
-        <hr>
-        <ul class="menu">
-          <li>Nutrition Value</li>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
-          <li class="float-right">Copyright 2021</li>
-        </ul>
-      </div>
+    <div class="row column">
+      <hr>
+      <ul class="menu">
+        <li>Nutrition Value</li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+        <li class="float-right">Copyright 2021</li>
+      </ul>
+    </div>
 
 
 
-      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-      <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-      <script src="./assets/js/script.js"></script>
-      <script>
-        $(document).foundation();
-      </script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
 </body>
 
 </html>
