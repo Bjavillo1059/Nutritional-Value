@@ -1,4 +1,3 @@
-$(document).foundation();
 
 var selectedItem = $('#dropdown-nutrient');
 var overviewOp = $('#overview');
@@ -24,6 +23,7 @@ function getApi() {
     //     carbsOp.appendChild(listItem);
     //   }
     // });
+
 }
 
 
