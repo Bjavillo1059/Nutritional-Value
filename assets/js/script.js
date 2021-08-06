@@ -1,4 +1,3 @@
-$(document).foundation();
 
 var selectedItem = $('#dropdown-nutrient');
 var overviewOp = $('#overview');
@@ -22,18 +21,18 @@ function useNutritionixAPI(nutrientData) {
   document.querySelector('#nutrient-results')
 }
 
-
+//RECIPE SEARCH JSS AREA
 let inputEl = document.querySelector('#middle-label')
 let searchButton = document.querySelector("#search")
 
-
+//Recipe
 //Event listener for the search button
 searchButton.addEventListener("click", () => {
   console.log("button pressed")
   sendApiRequest(inputEl.value)
 })
 
-
+//Recipe
 //API request from Edamam.com
 async function sendApiRequest(search) {
   let APP_ID = "fd634ac0"
@@ -45,8 +44,8 @@ async function sendApiRequest(search) {
   useApiData(data)
 }
 
-
-//Recipes results API data
+//Recipe
+//Recipes resluls API data
 function useApiData(data) {
   document.querySelector('#results').innerHTML = `
     <div class="grid-container">
