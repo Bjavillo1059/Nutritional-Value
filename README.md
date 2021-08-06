@@ -44,9 +44,9 @@ websites used for information refrences
 
 ## Technology Used
 
-- HTML   Brandon/Carina/Matthew/Ricardo/Ayele
-- CSS    Brandon/Carina/Matthew/Ricardo/Ayele
-- JavaScript     Brandon/Carina/Matthew/Ricardo/Ayele
+- HTML   Brandon/Carina/Matthew
+- CSS    Carina/Matthew
+- JavaScript     Ricardo/Ayele
 - Foundation JS     Brandon/Carina/Matthew/Ricardo/Ayele
 - Nutritionix API
 - Suggestic API
