@@ -8,10 +8,10 @@ var fatsOp = $('#fats');
 var vitamins = $('#vitamins');
 var itemValueId = $('#item-value');
 
-async function getNutritionApi() {
+async function getNutritionApi(search) {
   let nutritionAppId = "8badfcd6"
   let nutritionApiKey = '7bbd96e0c6fe2d09ae1c6f6d6d1b81c3'
-  let reqNutirixUrl = await fetch(`https://www.nutritionix.com/database/common-foods?app_id=${nutritionAppId}&app_key=${nutritionApiKey}&q=error`);
+  let reqNutirixUrl = await fetch(`https://www.nutritionix.com/database/common-foods?app_id=${nutritionAppId}&app_key=${nutritionApiKey}&q=${search}`);
   console.log(reqNutirixUrl)
   let nutrientData = await reqNutirixUrl.json()
   console.log(nutrientData)
