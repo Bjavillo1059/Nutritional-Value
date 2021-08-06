@@ -4,7 +4,7 @@ let searchButton = document.querySelector("#search")
 
 
 //Event listener for the search button
-searchButton.addEventListener("click",  ()=>{
+searchButton.addEventListener("click", () => {
   console.log("button pressed")
   sendApiRequest()
 })
@@ -12,19 +12,19 @@ searchButton.addEventListener("click",  ()=>{
 
 //API request from Edamam.com
 async function sendApiRequest() {
-let APP_ID = "fd634ac0"
-let API_KEY = "3d340a87803709d247b5368e6f03062c"
+  let APP_ID = "fd634ac0"
+  let API_KEY = "3d340a87803709d247b5368e6f03062c"
   let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=spaghetti`);
   console.log(response)
   let data = await response.json()
-      console.log(data)
-      useApiData(data)
+  console.log(data)
+  useApiData(data)
 }
 
 
 //Recipes resluls API data
-function useApiData(data){
-    document.querySelector('#results').innerHTML =`
+function useApiData(data) {
+  document.querySelector('#results').innerHTML = `
     <div class="grid-container">
         <div class="grid-x grid-margin-x small-up-2 medium-up-3">
           <div class="card" style="width: 300px;">
