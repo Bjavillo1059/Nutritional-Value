@@ -1,7 +1,7 @@
 
 let inputEl = document.querySelector('.search-input')
 let searchButton = document.querySelector("#search")
-let searchQuery = "";
+
 
 //Event listener for the search button
 searchButton.addEventListener("click",  ()=>{
@@ -12,9 +12,9 @@ searchButton.addEventListener("click",  ()=>{
 
 //API request from Edamam.com
 async function sendApiRequest() {
-let APP_ID = "4e5f887d"
-let API_KEY = "0f5e32848708399df2871d72c28341d6"
-  let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${searchQuery}`);
+let APP_ID = "fd634ac0"
+let API_KEY = "3d340a87803709d247b5368e6f03062c"
+  let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=spaghetti`);
   console.log(response)
   let data = await response.json()
       console.log(data)
