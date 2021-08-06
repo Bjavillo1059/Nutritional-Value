@@ -1,3 +1,31 @@
+$(document).foundation();
+
+var selectedItem = $('#dropdown-nutrient');
+var overviewOp = $('#overview');
+var carbsOp = $('#carbs');
+var proteinOp = $('#protein');
+var fatsOp = $('#fats');
+var vitamins = $('#vitamins');
+var itemValueId = $('#item-value');
+
+function getApi() {
+    var reqNutirixUrl = 'https://www.nutritionix.com/database';
+
+    fetch(reqNutirixUrl)
+    .then(res => res.json())
+    .then(data => console.log(data))
+    // .then(function (response) {
+    //   return response.json();
+    // })
+    // .then(function (data) {
+    //   for (var i = 0; i < data.length; i++) {
+    //     var listItem = carbsOp + itemValueId;
+    //     listItem.textContent = data[i].html_url;
+    //     carbsOp.appendChild(listItem);
+    //   }
+    // });
+}
+
 
 let inputEl = document.querySelector('.search-input')
 let searchButton = document.querySelector("#search")
