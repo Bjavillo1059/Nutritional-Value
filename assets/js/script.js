@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 $(document).foundation();
+=======
+>>>>>>> 827d178959612030645352f615dc1f36c521d5f4
 
 var selectedItem = $('#dropdown-nutrient');
 var overviewOp = $('#overview');
@@ -24,6 +27,10 @@ function getApi() {
     //     carbsOp.appendChild(listItem);
     //   }
     // });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 827d178959612030645352f615dc1f36c521d5f4
 }
 
 
