@@ -26,30 +26,30 @@ function getApi() {
 
 }
 
-
-let inputEl = document.querySelector('.search-input')
+//RECIPE SEARCH JSS AREA
+let inputEl = document.querySelector('#middle-label')
 let searchButton = document.querySelector("#search")
 
-
+//Recipe
 //Event listener for the search button
 searchButton.addEventListener("click", () => {
   console.log("button pressed")
-  sendApiRequest()
+  sendApiRequest(inputEl.value)
 })
 
-
+//Recipe
 //API request from Edamam.com
-async function sendApiRequest() {
+async function sendApiRequest(search) {
   let APP_ID = "fd634ac0"
   let API_KEY = "3d340a87803709d247b5368e6f03062c"
-  let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=spaghetti`);
+  let response = await fetch(`https://api.edamam.com/search?app_id=${APP_ID}&app_key=${API_KEY}&q=${search}`);
   console.log(response)
   let data = await response.json()
   console.log(data)
   useApiData(data)
 }
 
-
+//Recipe
 //Recipes resluls API data
 function useApiData(data) {
   document.querySelector('#results').innerHTML = `
