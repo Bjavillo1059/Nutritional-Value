@@ -1,0 +1,31 @@
+#search{
+    background-image: url('./assets/img/nutrition-cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#search-info{
+    background-color: rgb(0, 0, 0, .7);
+    color: white;
+}
+
+.button{
+    background-color: rgb(63, 143, 44);
+}
+
+.button:hover{
+    background-color: rgb(48, 104, 34);
+}
+
+a {
+    color: rgb(63, 143, 44);
+
+}
+
+a:hover{
+    color: rgb(48, 104, 34);
+}
+
+#dropdown-title:hover{
+    color: rgb(48, 104, 34);
+}
