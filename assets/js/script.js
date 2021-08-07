@@ -5,7 +5,6 @@ var proteinOp = $('#protein');
 var fatsOp = $('#fats');
 var nutrientEl = $('.search-input');
 var itemValueId = $('#item-value');
-var nutriDisplayEl = $('#nutrition-display');
 var selectImage = $('#nutrition-image-div')
 var nutriValAll = $('#full-nutrient-list')
 
@@ -126,28 +125,31 @@ async function sendApiRequest(search) {
 //Recipes resluls API data
 function useApiData(data) {
   document.querySelector('#results').innerHTML = `
-    <div class="grid-container">
-        <div class="grid-x grid-margin-x small-up-2 medium-up-3">
-          <div class="card" style="width: 300px;">
-            <img class="thumbnail" src="${data.hits[0].recipe.image}">
-            <h5>${data.hits[0].recipe.label}</h5>
-            <p>Recipe site: ${data.hits[0].recipe.source}</p>
-            <a href="${data.hits[0].recipe.url}"class="button hollow small small-only-expanded">Get The Recipe</a>
-          </div>
-          <div class="card" style="width: 300px;">
-            <img class="thumbnail" src="${data.hits[1].recipe.image}">
-            <h5>${data.hits[1].recipe.label}</h5>
-            <p>Recipe site: ${data.hits[1].recipe.source}</p>
-            <a href="${data.hits[1].recipe.url}"class="button hollow small small-only-expanded">Get The Recipe</a>
-          </div>
-          <div class="card" style="width: 300px;">
-            <img class="thumbnail" src="${data.hits[2].recipe.image}">
-            <h5>${data.hits[2].recipe.label}</h5>
-            <p>Recipe site: ${data.hits[2].recipe.source}</p>
-            <a href="${data.hits[2].recipe.url}"class="button hollow small small-only-expanded">Get The Recipe</a>
-          </div>
+    <div class="row">
+      <div class="card columns small-12 medium-6 large-3">
+        <img class="thumbnail" src="${data.hits[0].recipe.image}">
+        <h5>${data.hits[0].recipe.label}</h5>
+        <p>Recipe site: ${data.hits[0].recipe.source}</p>
+        <a href="${data.hits[0].recipe.url}"class="button hollow small small-only-expanded">Get The Recipe</a>
+      </div>
+      <div class="card columns small-12 medium-6 large-3">
+        <img class="thumbnail" src="${data.hits[1].recipe.image}">
+        <h5>${data.hits[1].recipe.label}</h5>
+        <p>Recipe site: ${data.hits[1].recipe.source}</p>
+        <a href="${data.hits[1].recipe.url}"class="button hollow small small-only-expanded">Get The Recipe</a>
+      </div>
+      <div class="card columns small-12 medium-6 large-3">
+        <img class="thumbnail" src="${data.hits[2].recipe.image}">
+        <h5>${data.hits[2].recipe.label}</h5>
+        <p>Recipe site: ${data.hits[2].recipe.source}</p>
+        <a href="${data.hits[2].recipe.url}"class="button hollow small small-only-expanded">Get The Recipe</a>
+      </div>
+      <div class="card columns small-12 medium-6 large-3">
+        <img class="thumbnail" src="${data.hits[3].recipe.image}">
+        <h5>${data.hits[3].recipe.label}</h5>
+        <p>Recipe site: ${data.hits[3].recipe.source}</p>
+        <a href="${data.hits[3].recipe.url}"class="button hollow small small-only-expanded">Get The Recipe</a>
       </div>
     </div>
-  </div>
  `
 }

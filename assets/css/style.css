@@ -1,4 +1,25 @@
-/* #search{
+a {
+    color: rgb(63, 143, 44);
+
+}
+
+footer {
+    background-color: rgb(26, 25, 25);
+    color: white;
+    padding-top: 40px;
+}
+
+main {
+    padding-bottom: 40px;
+}
+
+#site-map a{
+    display: block;
+    padding-bottom: 20px;
+}
+
+#search{
+
     background-image: url('./assets/img/nutrition-cover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -17,15 +38,48 @@
     background-color: rgb(48, 104, 34);
 }
 
-a {
-    color: rgb(63, 143, 44);
-
+.button:focus{
+    background-color: rgb(48, 104, 34)
 }
 
 a:hover{
     color: rgb(48, 104, 34);
 }
 
+a:active{
+    color: rgb(48, 104, 34)
+}
+
+.dropdown.menu > li.is-active> a{
+    color: rgb(48, 104, 34);
+}
+
+.dropdown.menu {
+    background-color: rgb(255, 255, 255);
+}
+
 #dropdown-title:hover{
     color: rgb(48, 104, 34);
-} */
+}
+
+.menu-text {
+    background-color: rgb(255, 255, 255);
+}
+
+#nutrition-section{
+    padding: 20px 0px 20px 0px;
+}
+
+.button.hollow.small.small-only-expanded {
+    color: rgb(48, 104, 34);
+    border-color: rgb(48, 104, 34);
+}
+
+.button.hollow.small.small-only-expanded:hover{
+    background-color: rgb(48, 104, 34);
+    color: white;
+}
+
+.top-bar {
+    background-color: rgb(255, 255, 255);
+}
