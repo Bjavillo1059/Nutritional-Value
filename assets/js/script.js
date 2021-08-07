@@ -20,46 +20,46 @@ searchButton.on('click', () => {
   useNutritionixAPI(inputEl.val())
 })
 
-nutrientEl.on("click", () => {
+nutrientEl.on("change", () => {
   console.log($('.search-input').val())
-  var selection = $('.search-input').val()
+  var inputItem = $('.search-input').val()
   var selectImage = $('<img>')
   if (nutrients) {
     // maybe add else statement for error
-  } if (selection === 'nutrient-data') 
+  } if (inputItem === 'nutrient-data') 
     selectImage.attr('src', nutrients.foods[0].photo.thumb)
-    nutriDisplayEl.text(nutrients.foods[0].full_nutrients)
+    nutriValAll.text(nutrients.foods[0].full_nutrients)
 
-  // } else if (selection === 'calories') {
+  // } else if (inputItem === 'calories') {
   //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
   //   nutriDisplayEl.inner('Calories: ' + nutrients.foods[0].nf_calories)
 
-  // } else if (selection === 'total-fat') {
+  // } else if (inputItem === 'total-fat') {
   //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
   //   nutriDisplayEl.inner(nutrients.foods[0].nf_total_fat)
 
-  // } else if (selection === 'cholesterol') {
+  // } else if (inputItem === 'cholesterol') {
   //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
   //   nutriDisplayEl.inner(nutrients.foods[0].nf_cholesterol)
 
-  // } else if (selection === 'sodium') {
+  // } else if (inputItem === 'sodium') {
   //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
   //   nutriDisplayEl.inner(nutrients.foods[0].nf_sodium)
 
-  // } else if (selection === 'potassium') {
+  // } else if (inputItem === 'potassium') {
   //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
   //   nutriDisplayEl.inner(nutrients.foods[0].nf_potassium)
 
-  // } else if (selection === 'total-carbohydrates') {
+  // } else if (inputItem === 'total-carbohydrates') {
   //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
   //   nutriDisplayEl.inner(nutrients.foods[0].nf_total_carbohydrate)
 
-  // } else (selection === 'protein')
+  // } else (inputItem === 'protein')
   // selectImage.attr('src', nutrients.foods[0].photo.thumb)
   // nutriDisplayEl.inner(nutrients.foods[0].nf_protein)
 
-  nutriDisplayEl.append(selectImage)
-  nutrientEl.append(nutriDisplayEl)
+  nutriValAll.append(selectImage)
+  nutrientEl.append(nutriValAll)
 
 })
 
