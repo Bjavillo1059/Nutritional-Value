@@ -16,11 +16,9 @@ User story - Always looking for sites that can tell you how much weight of a spe
 
 - HTML   Brandon/Carina/Matthew
 - CSS    Carina/Matthew
-- JavaScript     Ricardo/Ayele
-- Foundation JS     Brandon/Carina/Matthew/Ricardo/Ayele
-- Nutritionix API
-- Suggestic API
-- Genesis R&D Food Formulation
+- JavaScript     Brandon/Carina/Matthew
+- Foundation JS     Brandon/Carina/Matthew
+- Nutritionix API Brandon
 - FDC US Department of Agriculture API
 
 ## RoadMap
