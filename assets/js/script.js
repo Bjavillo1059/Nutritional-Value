@@ -3,58 +3,79 @@ var selectedItem = $('#dropdown-nutrient');
 var carbsOp = $('#carbs');
 var proteinOp = $('#protein');
 var fatsOp = $('#fats');
-var nutrientEl = $('#search-input');
+var nutrientEl = $('.search-input');
 var itemValueId = $('#item-value');
-var nutriDisplayEl = $('#nutrition-display'); // #nutrition-display
-var nutriImageEl = $('#nutrition-image')
+var selectImage = $('#nutrition-image-div')
+var nutriValAll = $('#full-nutrient-list')
 
 var nutrients;
 var overView;
-//= $('nutrient-display').text('Overview Serving Weight & info: ' + 'Calories: ' + nutrients.foods[0].nf_calories + 'Fats' + nutrients.foods[0].nf_total_fat + 'Cholesterol: ' + nutrients.foods[0].nf_cholesterol + 'Sodium: ' + nutrients.foods[0].nf_sodium + 'Potassium: ' + nutrients.foods[0].nf_potassium + 'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate + 'Protein: ' + nutrients.foods[0].nf_protein);
 
-let inputEl = document.querySelector('.search-input')
-let searchButton = document.querySelector("#search")
+var inputEl = $('.search-input')
+var searchButton = $("#search")
 
-searchButton.addEventListener('click', () => {
+searchButton.on('click', () => {
   console.log('button pressed')
-  useNutritionixAPI(inputEl.val)
+  useNutritionixAPI(inputEl.val())
 })
 
-
 nutrientEl.on("change", () => {
-  console.log($('#search-input').val())
-  var selection = $('#search-input').val()
-  // var nutriImageEl = $('<img>')
+  console.log($('.search-input').val())
+  var inputItem = $('.search-input').val()
+  var selectImage = $('<img>')
   if (nutrients) {
     // maybe add else statement for error
-    if (selection === 'carbohydrates') {
-      nutriImageEl.attr('src', nutrients.foods[0].photo.thumb)
-      nutriDisplayEl.text('Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate + ' Serving Weight: ' + nutrients.foods[0].serving_weight_grams + ' grams')
-    } else if (selection === 'proteins') {
-      nutriImageEl.attr('src', nutrients.foods[0].photo.thumb)
-      nutriDisplayEl.text('Proteins: ' + nutrients.foods[0].nf_protein + ' Serving Weight: ' + nutrients.foods[0].serving_weight_grams + ' grams')
-    } else (selection === 'fats')
-    nutriImageEl.attr('src', nutrients.foods[0].photo.thumb)
-    nutriDisplayEl.text('Fats: ' + nutrients.foods[0].nf_protein + ' Serving Weight: ' + nutrients.foods[0].serving_weight_grams + ' grams')
+  } if (inputItem === 'nutrient-data') 
+    selectImage.attr('src', nutrients.foods[0].photo.thumb)
+    nutriValAll.text(nutrients.foods[0].full_nutrients)
 
-  }
-  nutriDisplayEl.append(nutriImageEl)
+  // } else if (inputItem === 'calories') {
+  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+  //   nutriDisplayEl.inner('Calories: ' + nutrients.foods[0].nf_calories)
+
+  // } else if (inputItem === 'total-fat') {
+  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+  //   nutriDisplayEl.inner(nutrients.foods[0].nf_total_fat)
+
+  // } else if (inputItem === 'cholesterol') {
+  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+  //   nutriDisplayEl.inner(nutrients.foods[0].nf_cholesterol)
+
+  // } else if (inputItem === 'sodium') {
+  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+  //   nutriDisplayEl.inner(nutrients.foods[0].nf_sodium)
+
+  // } else if (inputItem === 'potassium') {
+  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+  //   nutriDisplayEl.inner(nutrients.foods[0].nf_potassium)
+
+  // } else if (inputItem === 'total-carbohydrates') {
+  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+  //   nutriDisplayEl.inner(nutrients.foods[0].nf_total_carbohydrate)
+
+  // } else (inputItem === 'protein')
+  // selectImage.attr('src', nutrients.foods[0].photo.thumb)
+  // nutriDisplayEl.inner(nutrients.foods[0].nf_protein)
+
+  nutriValAll.append(selectImage)
+  nutrientEl.append(nutriValAll)
+
 })
 
 function useNutritionixAPI(nutrientData) {
 
-  var queryNutritionix = "https://trackapi.nutritionix.com/v2/natural/nutrients"
+  var query = "https://trackapi.nutritionix.com/v2/natural/nutrients"
   var headers = {
     "Content-Type": "application/json",
     "x-app-id": "8badfcd6",
-    "x-app-key": "7bbd96e0c6fe2d09ae1c6f6d6d1b81c3"
+    "x-app-key": "d2c050133fb86f9f6b7eb3da8042f19d"
   }
   var body = {
 
     "query": nutrientData,
   }
 
-  fetch(queryNutritionix, {
+  fetch(query, {
     method: "POST",
     headers,
     body: JSON.stringify(body)
@@ -69,18 +90,21 @@ function useNutritionixAPI(nutrientData) {
       // call function to display overView nutrients
       // overView will consist of 
     })
-    .then(totalData => {
-      console.log(totalData)
-      overView = totalData
-    })
+    // .then(totalData => {
+    //   console.log(totalData)
+    //   overView = totalData
+    // })
 }
 
 //RECIPE SEARCH JSS AREA
+
 
 let inputElement = document.querySelector('.search-input')
 
 let searchBtn = document.querySelector("#search")
 
+
+let searchBtn = document.querySelector('#search')
 
 //Recipe
 //Event listener for the search button
