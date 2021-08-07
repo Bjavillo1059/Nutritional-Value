@@ -22,7 +22,9 @@ function useNutritionixAPI(nutrientData) {
 }
 
 //RECIPE SEARCH JSS AREA
-let inputEl = document.querySelector('.search-input')
+
+let inputEl = document.querySelector('#middle-label')
+
 let searchButton = document.querySelector("#search")
 
 //Recipe
