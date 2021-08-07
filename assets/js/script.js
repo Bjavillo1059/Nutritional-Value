@@ -1,4 +1,3 @@
-
 var selectedItem = $('#dropdown-nutrient');
 var carbsOp = $('#carbs');
 var proteinOp = $('#protein');
@@ -85,16 +84,12 @@ function useNutritionixAPI(nutrientData) {
     .then(data => {
       console.log(data)
       nutrients = data
+      useNutritionixData(data)
 
       // call function to display overView nutrients
       // overView will consist of
     })
-    .then(overView => {
-      useNutritionixData(overView)
-      nutrients = overView
-
-    })
-  }
+}
 // async function useNutritionixAPI(search) {
 //   let app_id = "8badfcd6"
 //   let api_key = "d2c050133fb86f9f6b7eb3da8042f19d"
@@ -105,15 +100,17 @@ function useNutritionixAPI(nutrientData) {
 //   useNutritionixData(data)
 // }
 
-function useNutritionixData(_data) {
-  document.querySelector('#nurtition-display').innerHTML = `
+function useNutritionixData(nutrients) {
+  document.querySelector('#nutrition-display').innerHTML = `
 <div class="work-feature-block row">
   <div class="columns medium-7" id="nutrition-image-div">
-  <img class="thumbnail" src="${nutrients.foods[0].photo.thumb}">
+  <img class="thumbnail" src="${nutrients.foods[0].photo.highres}">
   </div>
   <div class="columns medium-5">
-    <h2 class="work-feature-block-header">Description Data</h2>
-    <p id="full-nutrient-list" value="nutrient-data">${nutrients.foods[0].full_nutrients}</p>
+    <h2 class="work-feature-block-header">Serving Size & Weight</h2>
+    <p class="size-weight" value="serving-size">${'Serving Qty: ' + nutrients.foods[0].serving_qty}</p>
+    <p class="size-weight" value="serving-size">${nutrients.foods[0].serving_unit}</p>
+    <p class="size-weight" value="serving-size">${'Serving Weight in Grams ' + nutrients.foods[0].serving_weight_grams}</p>
     <h2>Nutrition Values</h2>
     <ul>
       <li value="calories">${'Calories: ' + nutrients.foods[0].nf_calories}</li>
@@ -124,6 +121,8 @@ function useNutritionixData(_data) {
       <li value="total-carbohyrdrates">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrates}</li>
       <li value="protein">${'Protein: ' + nutrients.foods[0].nf_protein}</li>
     </ul>
+    <br> <br>
+    <h3>Below you will find some recipes that can be used for the specific item of value in your search!</h3>
   </div>
 </div>
 `
