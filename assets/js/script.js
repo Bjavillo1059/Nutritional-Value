@@ -14,56 +14,56 @@ var overView;
 var inputEl = $('.search-input')
 var searchButton = $("#search")
 
+
+// searchButton.on("click", () => {
+//   console.log($('.search-input').val())
+//   var inputItem = $('.search-input').val()
+//   var selectImage = $('<img>')
+//   if (nutrients) {
+//     // maybe add else statement for error
+//   } if (inputItem === 'nutrient-data') 
+//     selectImage.attr('src', nutrients.foods[0].photo.thumb)
+//     nutriValAll.text(nutrients.foods[0].full_nutrients)
+
+// } else if (inputItem === 'calories') {
+//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+//   nutriDisplayEl.inner('Calories: ' + nutrients.foods[0].nf_calories)
+
+// } else if (inputItem === 'total-fat') {
+//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+//   nutriDisplayEl.inner(nutrients.foods[0].nf_total_fat)
+
+// } else if (inputItem === 'cholesterol') {
+//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+//   nutriDisplayEl.inner(nutrients.foods[0].nf_cholesterol)
+
+// } else if (inputItem === 'sodium') {
+//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+//   nutriDisplayEl.inner(nutrients.foods[0].nf_sodium)
+
+// } else if (inputItem === 'potassium') {
+//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+//   nutriDisplayEl.inner(nutrients.foods[0].nf_potassium)
+
+// } else if (inputItem === 'total-carbohydrates') {
+//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
+//   nutriDisplayEl.inner(nutrients.foods[0].nf_total_carbohydrate)
+
+// } else (inputItem === 'protein')
+// selectImage.attr('src', nutrients.foods[0].photo.thumb)
+// nutriDisplayEl.inner(nutrients.foods[0].nf_protein)
+
+//   nutriValAll.append(selectImage)
+//   nutrientEl.append(nutriValAll)
+
+// })    
+
 searchButton.on('click', () => {
   console.log('button pressed')
   useNutritionixAPI(inputEl.val())
 })
 
-nutrientEl.on("change", () => {
-  console.log($('.search-input').val())
-  var inputItem = $('.search-input').val()
-  var selectImage = $('<img>')
-  if (nutrients) {
-    // maybe add else statement for error
-  } if (inputItem === 'nutrient-data') 
-    selectImage.attr('src', nutrients.foods[0].photo.thumb)
-    nutriValAll.text(nutrients.foods[0].full_nutrients)
-
-  // } else if (inputItem === 'calories') {
-  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-  //   nutriDisplayEl.inner('Calories: ' + nutrients.foods[0].nf_calories)
-
-  // } else if (inputItem === 'total-fat') {
-  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-  //   nutriDisplayEl.inner(nutrients.foods[0].nf_total_fat)
-
-  // } else if (inputItem === 'cholesterol') {
-  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-  //   nutriDisplayEl.inner(nutrients.foods[0].nf_cholesterol)
-
-  // } else if (inputItem === 'sodium') {
-  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-  //   nutriDisplayEl.inner(nutrients.foods[0].nf_sodium)
-
-  // } else if (inputItem === 'potassium') {
-  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-  //   nutriDisplayEl.inner(nutrients.foods[0].nf_potassium)
-
-  // } else if (inputItem === 'total-carbohydrates') {
-  //   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-  //   nutriDisplayEl.inner(nutrients.foods[0].nf_total_carbohydrate)
-
-  // } else (inputItem === 'protein')
-  // selectImage.attr('src', nutrients.foods[0].photo.thumb)
-  // nutriDisplayEl.inner(nutrients.foods[0].nf_protein)
-
-  nutriValAll.append(selectImage)
-  nutrientEl.append(nutriValAll)
-
-})
-
 function useNutritionixAPI(nutrientData) {
-
   var query = "https://trackapi.nutritionix.com/v2/natural/nutrients"
   var headers = {
     "Content-Type": "application/json",
@@ -71,7 +71,6 @@ function useNutritionixAPI(nutrientData) {
     "x-app-key": "d2c050133fb86f9f6b7eb3da8042f19d"
   }
   var body = {
-
     "query": nutrientData,
   }
 
@@ -88,12 +87,46 @@ function useNutritionixAPI(nutrientData) {
       nutrients = data
 
       // call function to display overView nutrients
-      // overView will consist of 
+      // overView will consist of
     })
-    // .then(totalData => {
-    //   console.log(totalData)
-    //   overView = totalData
-    // })
+    .then(overView => {
+      useNutritionixData(overView)
+      nutrients = overView
+
+    })
+  }
+// async function useNutritionixAPI(search) {
+//   let app_id = "8badfcd6"
+//   let api_key = "d2c050133fb86f9f6b7eb3da8042f19d"
+//   let response = await fetch(`https://trackapi.nutritionix.com/v2/natural/nutrients?app_id=${app_id}&app_key=${api_key}&q=${search}`);
+//   console.log(response)
+//   let data = await response.json()
+//   console.log(data)
+//   useNutritionixData(data)
+// }
+
+function useNutritionixData(_data) {
+  document.querySelector('#nurtition-display').innerHTML = `
+<div class="work-feature-block row">
+  <div class="columns medium-7" id="nutrition-image-div">
+  <img class="thumbnail" src="${nutrients.foods[0].photo.thumb}">
+  </div>
+  <div class="columns medium-5">
+    <h2 class="work-feature-block-header">Description Data</h2>
+    <p id="full-nutrient-list" value="nutrient-data">${nutrients.foods[0].full_nutrients}</p>
+    <h2>Nutrition Values</h2>
+    <ul>
+      <li value="calories">${'Calories: ' + nutrients.foods[0].nf_calories}</li>
+      <li value="total-fat">${'Fats: ' + nutrients.foods[0].nf_total_fat}</li>
+      <li value="cholesterol">${'Cholesterol: ' + nutrients.foods[0].nf_cholesterol}</li>
+      <li value="sodium">${'Sodium: ' + nutrients.foods[0].nf_sodium}</li>
+      <li value="potassium">${'Potassium: ' + nutrients.foods[0].nf_potassium}</li>
+      <li value="total-carbohyrdrates">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrates}</li>
+      <li value="protein">${'Protein: ' + nutrients.foods[0].nf_protein}</li>
+    </ul>
+  </div>
+</div>
+`
 }
 
 //RECIPE SEARCH JSS AREA
@@ -103,8 +136,6 @@ let inputElement = document.querySelector('.search-input')
 
 let searchBtn = document.querySelector("#search")
 
-
-let searchBtn = document.querySelector('#search')
 
 //Recipe
 //Event listener for the search button
