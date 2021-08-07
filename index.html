@@ -32,146 +32,112 @@
 
 </head>
 
-<body class=" bg-image">
-
-
-  <!-- Start Top Bar -->
-  <div class="top-bar">
-    <div class="row">
-      <div class="top-bar-left">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li class="menu-text">Nutrition Value</li>
-          <li class="has-submenu">
-            <a href="#">Types of food</a>
-            <ul class="submenu menu vertical" data-submenu id="dropdown-title">
-              <li><a
-                  href="https://en.wikipedia.org/wiki/Veganism#:~:text=Veganism%20is%20the%20practice%20of,the%20commodity%20status%20of%20animals.&text=Dietary%20vegans%2C%20also%20known%20as,any%20other%20animal%2Dderived%20substances.">Veganism</a>
-              </li>
-              <li><a href="https://en.wikipedia.org/wiki/Vegetarianism">Vegetarianism</a></li>
-              <li><a href="https://pubmed.ncbi.nlm.nih.gov/30770584/">Emotional Feeding</a></li>
-              <li><a href="https://medlineplus.gov/ency/article/002458.htm">Sports Nutrition</a></li>
-              <li><a href="https://www.cdc.gov/healthyweight/healthy_eating/index.html">Healthy Eating</a></li>
+<body>
+    <main>
+        <div class="top-bar" id="home">
+            <ul class="menu">
+                <li class="menu-text">NUTRTIONAL VALUE</li>
             </ul>
-          </li>
-          <!-- <li><a href="#" class="disabled" >Types of Nutrition</a></li> -->
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        <ul class="dropdown menu" data-dropdown-menu>
-          <li type="list" class="has-submenu" placeholder="Click on item">
-            <a href="#">Five Food Groups</a>
-            <ul class="submenu menu vertical" data-submenu>
-              <li><a
-                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and">Meats/Poultry</a>
-              </li>
-              <li><a
-                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans"
-                  alt="veg-info">Vegetables, Legumes/Beans</a></li>
-              <li><a href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit">Fruit</a></li>
-              <li><a
-                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre">Grain</a>
-              </li>
-              <li><a
-                  href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat">Dairy</a>
-              </li>
+            <ul class="dropdown menu align-right" data-dropdown-menu>
+                <li>
+                    <a href="#">TYPES OF FOOD</a>
+                    <ul class="menu">
+                        <li><a id="menu-item" href="https://en.wikipedia.org/wiki/Veganism#:~:text=Veganism%20is%20the%20practice%20of,the%20commodity%20status%20of%20animals.&text=Dietary%20vegans%2C%20also%20known%20as,any%20other%20animal%2Dderived%20substances.">VEGANISM</a></li>
+                        <li><a id="menu-item" href="https://en.wikipedia.org/wiki/Vegetarianism">VEGETARIANISM</a></li>
+                        <li><a id="menu-item" href="https://pubmed.ncbi.nlm.nih.gov/30770584/">EMOTIONAL EATING</a></li>
+                        <li><a id="menu-item" href="https://medlineplus.gov/ency/article/002458.htm">SPORTS NUTRITION</a></li>
+                        <li><a id="menu-item" href="https://www.cdc.gov/healthyweight/healthy_eating/index.html">HEALTHY EATING</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">FOOD GROUPS</a>
+                    <ul class="menu">
+                        <li><a id="menu-item" href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/lean-meat-and-poultry-fish-eggs-tofu-nuts-and-seeds-and">MEATS/FISH</a></li>
+                        <li><a id="menu-item" href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/vegetables-and-legumes-beans">VEGETABLES/LEGUMES/BEANS</a></li>
+                        <li><a id="menu-item" href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/fruit">FRUITS</a></li>
+                        <li><a id="menu-item" href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/grain-cereal-foods-mostly-wholegrain-and-or-high-cereal-fibre">GRAINS</a></li>
+                        <li><a id="menu-item" href="https://www.eatforhealth.gov.au/food-essentials/five-food-groups/milk-yoghurt-cheese-andor-their-alternatives-mostly-reduced-fat">DAIRY</a></li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!-- End Top Bar -->
-  <br>
-  <!-- You can now combine a row and column if you just need a 12 column row -->
-  <div class="row columns">
-    <nav aria-label="You are here:" role="navigation">
 
-      <ul class="breadcrumbs">
-        <li> <a href="#">Overview</a> </li>
-        <div id="nutrient-results">Nutrient Results</div>
+        </div>
+        <div id="search" class="row" data-interchange="[assets/img/nutrition-cover.jpg, large]">
+            <div id="search-info" class="medium-6 large-5 columns ">
+                <div class="row">
+                <h3 class="text-center">Find The Value of Food Source</h3>
+                <p class="text-center">Health conscious users are often frustrated by the effort it takes to easily determine the nutrition value of their food. Search a specific food item and get all the info you need to make a healthy choice.</p>
+                    <div class="small-12 columns ">
+                        <input type="text" class="search-input" id="middle-label search-input" placeholder="Item you are searching for...">
+                        <button class="button large expanded " id="search">Search for Info</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="nutrition-section">
+            <div class="columns text-center" style="background-color: rgb(16, 114, 16)">
+                <h3>NUTRITIONAL VALUES</h1>
+            </div>
 
-        <li>
-          <a href="#">Specific Type of Nutrient</a>
-          <label>
-            <select>
-              <option value="husker">Carbohydrates</option>
-              <option value="starbuck">Proteins</option>
-              <option value="hotdog">Fats</option>
-              <option value="apollo">Vitamins</option>
-              <option value="apollo">Minerals</option>
-            </select>
-          </label>
-        </li>
-
-        </li>
-      </ul>
-
-    </nav>
-  </div>
-
-  <div id="search" class="row" data-interchange="[assets/img/nutrition-cover.jpg, large]">
-    <div id="search-info" class="medium-6 large-5 columns">
-
-      <div class="row">
-
-        <div class="medium-6 large-5 columns">
-          <h3>Find The Value of Food Source</h3>
-          <p>Health conscious users are often frustrated by the effort it takes to easily determine the nutrition value
-            of
-            their food. Search a specific food item and get all the info you need to make a healthy choice.
-          </p>
-
-          <div class="row">
-            <!--Treighton helped here-->
-            <div class="small-12 columns">
-              <input type="text" id="middle-label" placeholder="Item you are searching for...">
-
-              <div class="small-3 columns">
-                <label for="middle-label" class="middle">Item of Value</label>
+            <div id="nutrition-display">
+              <div class="work-feature-block row">
+                <div class="columns medium-7">
+                  <img id="nutrition-image" class="work-feature-block-image" src="assets/img/thumbs up placeholder.jpg"/>
+                </div>
+                <div class="columns medium-5">
+                  <h2 class="work-feature-block-header">Selected Item Description Data</h2>
+                  <p id="full-nutrient-list"></p>
+                  <h2>Nutrition Values As Seen On Labels</h2>
+                  <ul>
+                    <li value="calories">Calories</li>
+                    <li value="total-fat">Total Fat</li>
+                    <li value="cholesterol">Cholesterol</li>
+                    <li value="sodium">Sodium</li>
+                    <li value="potassium">Potassium</li>
+                    <li value="total-carbohyrdrates">Total Carbohydrates</li>
+                    <li value="protein">Protein</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
-            <a href="#" class="button large expanded" id="search">Search for Info</a>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="column row">
-        <hr>
-        <ul class="tabs" data-tabs id="example-tabs">          
-          <li class="tabs-title text-start"><a href="#panel2">Recipes for item chosen</a></li>
-        </ul>
-        <div class="tabs-content" data-tabs-content="example-tabs">
-          <div class="tabs-panel" id="panel2">
-            <div class class="row medium-up-3 large-up-5">
-              <div id="results">recipes</div>
+        </div> 
+        <div class="row">
+            <div class="columns text-center" style="background-color: rgb(16, 114, 16)">
+                <h3>RECIPES</h1>
             </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="row column">
-      <hr>
-      <ul class="menu">
-        <li>Nutrition Value</li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-        <li class="float-right">Copyright 2021</li>
-      </ul>
-    </div>
-
-
-
+            <div id="results"></div>
+        </div>         
+    </main>
+    <footer>
+        <div class="row small-up-1 medium-up-2 large-up-2">
+            <div class="columns" id="site-map">
+                <h3>SITE MAP</h3>
+                <hr>
+                <a href="#home">HOME</a>
+                <a href="#">PROJECT REPO</a>
+            </div>
+            <div class="columns">
+                <h3>CREATED BY</h3>
+                <hr>
+                <p>Carina Diaz: <a href=""></a></p>
+                <p>Brandon Javillo: <a href="https://github.com/Bjavillo1059" target="_blank">GITHUB</a></p>
+                <p>Matthew Jaworski: <a href=""></a></p>
+                <p>Ayele Lintamo: <a href=""></a></p>
+            </div>       
+        </div>   
+    </footer> 
+    
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script src="./assets/js/script.js"></script>
     <script>
       $(document).foundation();
     </script>
+
 </body>
 
 </html>
+
+
+

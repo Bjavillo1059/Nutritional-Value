@@ -1,29 +1,81 @@
 
 var selectedItem = $('#dropdown-nutrient');
-var overviewOp = $('#overview');
 var carbsOp = $('#carbs');
 var proteinOp = $('#protein');
 var fatsOp = $('#fats');
-var vitamins = $('#vitamins');
+var nutrientEl = $('#search-input');
 var itemValueId = $('#item-value');
+var nutriDisplayEl = $('#nutrition-display'); // #nutrition-display
+var nutriImageEl = $('#nutrition-image')
 
-async function getNutritionApi(search) {
-  let nutritionAppId = "8badfcd6"
-  let nutritionApiKey = '7bbd96e0c6fe2d09ae1c6f6d6d1b81c3'
-  let reqNutirixUrl = await fetch(`https://www.nutritionix.com/database/common-foods?app_id=${nutritionAppId}&app_key=${nutritionApiKey}&q=${search}`);
-  console.log(reqNutirixUrl)
-  let nutrientData = await reqNutirixUrl.json()
-  console.log(nutrientData)
-  useNutritionixAPI(nutrientData)
-}
+var nutrients;
+var overView;
+//= $('nutrient-display').text('Overview Serving Weight & info: ' + 'Calories: ' + nutrients.foods[0].nf_calories + 'Fats' + nutrients.foods[0].nf_total_fat + 'Cholesterol: ' + nutrients.foods[0].nf_cholesterol + 'Sodium: ' + nutrients.foods[0].nf_sodium + 'Potassium: ' + nutrients.foods[0].nf_potassium + 'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate + 'Protein: ' + nutrients.foods[0].nf_protein);
+
+let inputEl = document.querySelector('.search-input')
+let searchButton = document.querySelector("#search")
+
+searchButton.addEventListener('click', () => {
+  console.log('button pressed')
+  useNutritionixAPI(inputEl.val)
+})
+
+
+nutrientEl.on("change", () => {
+  console.log($('#search-input').val())
+  var selection = $('#search-input').val()
+  // var nutriImageEl = $('<img>')
+  if (nutrients) {
+    // maybe add else statement for error
+    if (selection === 'carbohydrates') {
+      nutriImageEl.attr('src', nutrients.foods[0].photo.thumb)
+      nutriDisplayEl.text('Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate + ' Serving Weight: ' + nutrients.foods[0].serving_weight_grams + ' grams')
+    } else if (selection === 'proteins') {
+      nutriImageEl.attr('src', nutrients.foods[0].photo.thumb)
+      nutriDisplayEl.text('Proteins: ' + nutrients.foods[0].nf_protein + ' Serving Weight: ' + nutrients.foods[0].serving_weight_grams + ' grams')
+    } else (selection === 'fats')
+    nutriImageEl.attr('src', nutrients.foods[0].photo.thumb)
+    nutriDisplayEl.text('Fats: ' + nutrients.foods[0].nf_protein + ' Serving Weight: ' + nutrients.foods[0].serving_weight_grams + ' grams')
+
+  }
+  nutriDisplayEl.append(nutriImageEl)
+})
 
 function useNutritionixAPI(nutrientData) {
-  document.querySelector('#nutrient-results')
+
+  var queryNutritionix = "https://trackapi.nutritionix.com/v2/natural/nutrients"
+  var headers = {
+    "Content-Type": "application/json",
+    "x-app-id": "8badfcd6",
+    "x-app-key": "7bbd96e0c6fe2d09ae1c6f6d6d1b81c3"
+  }
+  var body = {
+
+    "query": nutrientData,
+  }
+
+  fetch(queryNutritionix, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body)
+  })
+    .then(res => {
+      return res.json()
+    })
+    .then(data => {
+      console.log(data)
+      nutrients = data
+
+      // call function to display overView nutrients
+      // overView will consist of 
+    })
+    .then(totalData => {
+      console.log(totalData)
+      overView = totalData
+    })
 }
 
 //RECIPE SEARCH JSS AREA
-let inputEl = document.querySelector('#middle-label')
-let searchButton = document.querySelector("#search")
 
 //Recipe
 //Event listener for the search button
@@ -73,4 +125,3 @@ function useApiData(data) {
   </div>
  `
 }
-
