@@ -10,36 +10,6 @@ Motivation for development? - Health improvement
 User story - Always looking for sites that can tell you how much weight of a specific food would give you the ideal nutrition value you’re looking for
 
 
-<!-- Title Bar  
-// - Title box Jumbotron 
-// - search function
-// drop donw menu with searchable functions of specific items
-//    - Meat - commonly used item in recipe
-//    - Fruits/Veggies - commonly used item in recipe
-//    - Serving Size
-//    - Ingredients list
-//          - query to recipe site
-// 
-
-// - description of how the site works (about me)
-// - what information does the site display
-
-//     - pulls up previous searches
-//     - pulls up common popular foods
-
-//     - weight
-//     - lipids (fats)
-//     - protein
-//     - carbohydrates
-//           - fiber
-//     - total caloric value
-
-websites used for information refrences
-    - eatforhealth.gov.au
-    - en.yestherapyhelps.com
-
-    -->
-
 ## Deployment
 
 ## Technology Used
