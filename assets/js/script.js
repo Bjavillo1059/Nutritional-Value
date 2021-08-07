@@ -7,23 +7,18 @@ var fatsOp = $('#fats');
 var vitamins = $('#vitamins');
 var itemValueId = $('#item-value');
 
-function getApi() {
-    var reqNutirixUrl = 'https://www.nutritionix.com/database';
+async function getNutritionApi(search) {
+  let nutritionAppId = "8badfcd6"
+  let nutritionApiKey = '7bbd96e0c6fe2d09ae1c6f6d6d1b81c3'
+  let reqNutirixUrl = await fetch(`https://www.nutritionix.com/database/common-foods?app_id=${nutritionAppId}&app_key=${nutritionApiKey}&q=${search}`);
+  console.log(reqNutirixUrl)
+  let nutrientData = await reqNutirixUrl.json()
+  console.log(nutrientData)
+  useNutritionixAPI(nutrientData)
+}
 
-    fetch(reqNutirixUrl)
-    .then(res => res.json())
-    .then(data => console.log(data))
-    // .then(function (response) {
-    //   return response.json();
-    // })
-    // .then(function (data) {
-    //   for (var i = 0; i < data.length; i++) {
-    //     var listItem = carbsOp + itemValueId;
-    //     listItem.textContent = data[i].html_url;
-    //     carbsOp.appendChild(listItem);
-    //   }
-    // });
-
+function useNutritionixAPI(nutrientData) {
+  document.querySelector('#nutrient-results')
 }
 
 //RECIPE SEARCH JSS AREA
