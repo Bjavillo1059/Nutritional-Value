@@ -58,7 +58,7 @@ function useNutritionixData(nutrients) {
       <li value="cholesterol">${'Cholesterol: ' + nutrients.foods[0].nf_cholesterol}</li>
       <li value="sodium">${'Sodium: ' + nutrients.foods[0].nf_sodium}</li>
       <li value="potassium">${'Potassium: ' + nutrients.foods[0].nf_potassium}</li>
-      <li value="total-carbohyrdrates">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrates}</li>
+      <li value="total-carbohyrdrate">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate}</li>
       <li value="protein">${'Protein: ' + nutrients.foods[0].nf_protein}</li>
     </ul>
     <br> <br>
