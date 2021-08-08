@@ -12,6 +12,8 @@ User story - Always looking for sites that can tell you how much weight of a spe
 
 ## Deployment
 
+<img src="./assets/img/Project Snippet.PNG" alt=" img of Project Snippet"/>
+
 ## Technology Used
 
 - HTML   Brandon/Carina/Matthew
