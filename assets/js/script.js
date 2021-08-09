@@ -1,7 +1,3 @@
-var selectedItem = $('#dropdown-nutrient');
-var carbsOp = $('#carbs');
-var proteinOp = $('#protein');
-var fatsOp = $('#fats');
 var nutrientEl = $('.search-input');
 var itemValueId = $('#item-value');
 var selectImage = $('#nutrition-image-div')
@@ -12,50 +8,6 @@ var overView;
 
 var inputEl = $('.search-input')
 var searchButton = $("#search")
-
-
-// searchButton.on("click", () => {
-//   console.log($('.search-input').val())
-//   var inputItem = $('.search-input').val()
-//   var selectImage = $('<img>')
-//   if (nutrients) {
-//     // maybe add else statement for error
-//   } if (inputItem === 'nutrient-data') 
-//     selectImage.attr('src', nutrients.foods[0].photo.thumb)
-//     nutriValAll.text(nutrients.foods[0].full_nutrients)
-
-// } else if (inputItem === 'calories') {
-//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-//   nutriDisplayEl.inner('Calories: ' + nutrients.foods[0].nf_calories)
-
-// } else if (inputItem === 'total-fat') {
-//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-//   nutriDisplayEl.inner(nutrients.foods[0].nf_total_fat)
-
-// } else if (inputItem === 'cholesterol') {
-//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-//   nutriDisplayEl.inner(nutrients.foods[0].nf_cholesterol)
-
-// } else if (inputItem === 'sodium') {
-//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-//   nutriDisplayEl.inner(nutrients.foods[0].nf_sodium)
-
-// } else if (inputItem === 'potassium') {
-//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-//   nutriDisplayEl.inner(nutrients.foods[0].nf_potassium)
-
-// } else if (inputItem === 'total-carbohydrates') {
-//   selectImage.attr('src', nutrients.foods[0].photo.thumb)
-//   nutriDisplayEl.inner(nutrients.foods[0].nf_total_carbohydrate)
-
-// } else (inputItem === 'protein')
-// selectImage.attr('src', nutrients.foods[0].photo.thumb)
-// nutriDisplayEl.inner(nutrients.foods[0].nf_protein)
-
-//   nutriValAll.append(selectImage)
-//   nutrientEl.append(nutriValAll)
-
-// })    
 
 searchButton.on('click', () => {
   console.log('button pressed')
@@ -85,20 +37,8 @@ function useNutritionixAPI(nutrientData) {
       console.log(data)
       nutrients = data
       useNutritionixData(data)
-
-      // call function to display overView nutrients
-      // overView will consist of
     })
 }
-// async function useNutritionixAPI(search) {
-//   let app_id = "8badfcd6"
-//   let api_key = "d2c050133fb86f9f6b7eb3da8042f19d"
-//   let response = await fetch(`https://trackapi.nutritionix.com/v2/natural/nutrients?app_id=${app_id}&app_key=${api_key}&q=${search}`);
-//   console.log(response)
-//   let data = await response.json()
-//   console.log(data)
-//   useNutritionixData(data)
-// }
 
 function useNutritionixData(nutrients) {
   document.querySelector('#nutrition-display').innerHTML = `
@@ -109,8 +49,8 @@ function useNutritionixData(nutrients) {
   <div class="columns medium-5">
     <h2 class="work-feature-block-header">Serving Size & Weight</h2>
     <p class="size-weight" value="serving-size">${'Serving Qty: ' + nutrients.foods[0].serving_qty}</p>
-    <p class="size-weight" value="serving-size">${nutrients.foods[0].serving_unit}</p>
-    <p class="size-weight" value="serving-size">${'Serving Weight in Grams ' + nutrients.foods[0].serving_weight_grams}</p>
+    <p class="size-weight" value="serving-size">${'Serving Unit Size: ' + nutrients.foods[0].serving_unit}</p>
+    <p class="size-weight" value="serving-size">${'Serving Weight in Grams: ' + nutrients.foods[0].serving_weight_grams}</p>
     <h2>Nutrition Values</h2>
     <ul>
       <li value="calories">${'Calories: ' + nutrients.foods[0].nf_calories}</li>
@@ -118,7 +58,7 @@ function useNutritionixData(nutrients) {
       <li value="cholesterol">${'Cholesterol: ' + nutrients.foods[0].nf_cholesterol}</li>
       <li value="sodium">${'Sodium: ' + nutrients.foods[0].nf_sodium}</li>
       <li value="potassium">${'Potassium: ' + nutrients.foods[0].nf_potassium}</li>
-      <li value="total-carbohyrdrates">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrates}</li>
+      <li value="total-carbohyrdrate">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate}</li>
       <li value="protein">${'Protein: ' + nutrients.foods[0].nf_protein}</li>
     </ul>
     <br> <br>
@@ -132,7 +72,6 @@ function useNutritionixData(nutrients) {
 
 
 let inputElement = document.querySelector('.search-input')
-
 let searchBtn = document.querySelector("#search")
 
 
