@@ -72,8 +72,8 @@ function useNutritionixData(nutrients) {
 
 
 let inputElement = document.querySelector('.search-input')
-let searchBtn = document.querySelector("#search")
 
+let searchBtn = document.querySelector("#search")
 
 //Recipe
 //Event listener for the search button
