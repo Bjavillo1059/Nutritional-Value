@@ -9,6 +9,10 @@ footer {
     padding-top: 40px;
 }
 
+h4{
+    font-family: 'Roboto', sans-serif;
+}
+
 main {
     padding-bottom: 40px;
 }
@@ -19,6 +23,7 @@ main {
 }
 
 #search{
+
     background-image: url('./assets/img/nutrition-cover.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,6 +32,14 @@ main {
 #search-info{
     background-color: rgb(0, 0, 0, .7);
     color: white;
+}
+
+#title{
+    font-family: 'Roboto', san-serif;
+}
+
+#title-logo{
+    color: rgb(48, 104, 34);
 }
 
 .button{
@@ -38,7 +51,7 @@ main {
 }
 
 .button:focus{
-    background-color: rgb(48, 104, 34)
+    background-color: rgb(48, 104, 34);
 }
 
 a:hover{
@@ -66,7 +79,13 @@ a:active{
 }
 
 #nutrition-section{
-    padding: 20px 0px 20px 0px;
+    border-bottom: 5px solid rgb(63, 143, 44);
+    padding-top: 10px;
+}
+
+#recipe-section{
+    border-bottom: 5px solid rgb(63, 143, 44);
+    padding-top: 10px;
 }
 
 .button.hollow.small.small-only-expanded {
@@ -81,4 +100,16 @@ a:active{
 
 .top-bar {
     background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 39.9375em){
+    .top-bar{
+        display: block;
+        
+    }
+
+    ul.menu{
+        background-color: white;
+        justify-content: center;
+    }
 }
