@@ -1,3 +1,5 @@
+/* Global CSS Values */
+
 a {
     color: rgb(63, 143, 44);
 
@@ -9,60 +11,31 @@ footer {
     padding-top: 40px;
 }
 
+h3{
+    font-family: 'Roboto', sans-serif;
+}
+
 h4{
     font-family: 'Roboto', sans-serif;
+}
+
+h5{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(48, 104, 34);  
 }
 
 main {
     padding-bottom: 40px;
 }
 
-#site-map a{
-    display: block;
-    padding-bottom: 20px;
-}
-
-#search{
-
-    background-image: url('./assets/img/nutrition-cover.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#search-info{
-    background-color: rgb(0, 0, 0, .7);
-    color: white;
-}
-
-#title{
-    font-family: 'Roboto', san-serif;
-}
-
-#title-logo{
-    color: rgb(48, 104, 34);
-}
+/* Class CSS Values */
 
 .button{
     background-color: rgb(63, 143, 44);
 }
 
-.button:hover{
-    background-color: rgb(48, 104, 34);
-}
-
-.button:focus{
-    background-color: rgb(48, 104, 34);
-}
-
-a:hover{
-    color: rgb(48, 104, 34);
-}
-
-a:active{
-    color: rgb(48, 104, 34)
-}
-
-.dropdown.menu > li.is-active> a{
+.button.hollow.small.small-only-expanded {
+    border-color: rgb(48, 104, 34);
     color: rgb(48, 104, 34);
 }
 
@@ -70,13 +43,47 @@ a:active{
     background-color: rgb(255, 255, 255);
 }
 
-#dropdown-title:hover{
+.dropdown.menu > li.is-active> a{
     color: rgb(48, 104, 34);
 }
 
 .menu-text {
     background-color: rgb(255, 255, 255);
 }
+
+.nutrivalues{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(26, 25, 25);
+}
+
+.nutrival-list li{
+    list-style-type: none;
+}
+
+.nutrition-value-block-header{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(48, 104, 34);
+}
+
+.recipeDesc{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(26, 25, 25);
+}
+.size-weight{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(26, 25, 25);
+}
+
+.top-bar {
+    background-color: rgb(255, 255, 255);
+}
+
+.work-feature-block-header{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(48, 104, 34);
+}
+
+/* ID CSS Values*/
 
 #nutrition-section{
     border-bottom: 5px solid rgb(63, 143, 44);
@@ -88,19 +95,62 @@ a:active{
     padding-top: 10px;
 }
 
-.button.hollow.small.small-only-expanded {
-    color: rgb(48, 104, 34);
-    border-color: rgb(48, 104, 34);
+#search{
+    background-image: url('./assets/img/nutrition-cover.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+#search-info{
+    background-color: rgb(0, 0, 0, .7);
+    color: white;
+}
+
+#site-map a{
+    display: block;
+    padding-bottom: 20px;
+}
+
+#title{
+    font-family: 'Roboto', san-serif;
+}
+
+#title-logo{
+    color: rgb(48, 104, 34);
+}
+
+/* CSS Selectors */
+
+a:hover{
+    color: rgb(48, 104, 34);
+}
+
+a:active{
+    color: rgb(48, 104, 34);
+}
+
+.button:hover{
+    background-color: rgb(48, 104, 34);
+}
+
+.button:focus{
+    background-color: rgb(48, 104, 34);
+}
+
+#dropdown-title:hover{
+    color: rgb(48, 104, 34);
+}
+
+li.has-submenu.is-dropdown-submenu-parent.is-down-arrow > a:after {
+    border-color: rgb(48, 104, 34);
+ }
 
 .button.hollow.small.small-only-expanded:hover{
     background-color: rgb(48, 104, 34);
     color: white;
 }
 
-.top-bar {
-    background-color: rgb(255, 255, 255);
-}
+/* Media Queries */
 
 @media screen and (max-width: 39.9375em){
     .top-bar{
