@@ -51,18 +51,18 @@ function useNutritionixData(nutrients) {
     <p class="size-weight" value="serving-size">${'Serving Qty: ' + nutrients.foods[0].serving_qty}</p>
     <p class="size-weight" value="serving-size">${'Serving Unit Size: ' + nutrients.foods[0].serving_unit}</p>
     <p class="size-weight" value="serving-size">${'Serving Weight in Grams: ' + nutrients.foods[0].serving_weight_grams}</p>
-    <h2>Nutrition Values</h2>
-    <ul>
-      <li value="calories">${'Calories: ' + nutrients.foods[0].nf_calories}</li>
-      <li value="total-fat">${'Fats: ' + nutrients.foods[0].nf_total_fat}</li>
-      <li value="cholesterol">${'Cholesterol: ' + nutrients.foods[0].nf_cholesterol}</li>
-      <li value="sodium">${'Sodium: ' + nutrients.foods[0].nf_sodium}</li>
-      <li value="potassium">${'Potassium: ' + nutrients.foods[0].nf_potassium}</li>
-      <li value="total-carbohyrdrate">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate}</li>
-      <li value="protein">${'Protein: ' + nutrients.foods[0].nf_protein}</li>
+    <h2 class="nutrition-value-block-header">Nutrition Values</h2>
+    <ul class="nutrival-list">
+      <li class="nutrivalues" value="calories">${'Calories: ' + nutrients.foods[0].nf_calories}</li>
+      <li class="nutrivalues" value="total-fat">${'Fats: ' + nutrients.foods[0].nf_total_fat}</li>
+      <li class="nutrivalues" value="cholesterol">${'Cholesterol: ' + nutrients.foods[0].nf_cholesterol}</li>
+      <li class="nutrivalues" value="sodium">${'Sodium: ' + nutrients.foods[0].nf_sodium}</li>
+      <li class="nutrivalues" value="potassium">${'Potassium: ' + nutrients.foods[0].nf_potassium}</li>
+      <li class="nutrivalues" value="total-carbohyrdrate">${'Carbohydrates: ' + nutrients.foods[0].nf_total_carbohydrate}</li>
+      <li class="nutrivalues" value="protein">${'Protein: ' + nutrients.foods[0].nf_protein}</li>
     </ul>
     <br> <br>
-    <h3>Below you will find some recipes that can be used for the specific item of value in your search!</h3>
+    <h3>Below you will find some recipes that can be used for the specific item you searched!</h3>
   </div>
 </div>
 `
@@ -102,25 +102,25 @@ function useApiData(data) {
       <div class="card columns small-12 medium-6 large-3">
         <img class="thumbnail" src="${data.hits[0].recipe.image}">
         <h5>${data.hits[0].recipe.label}</h5>
-        <p>Recipe site: ${data.hits[0].recipe.source}</p>
+        <p class="recipeDesc">Recipe site: ${data.hits[0].recipe.source}</p>
         <a href="${data.hits[0].recipe.url}" target="_blank" class="button hollow small small-only-expanded">Get The Recipe</a>
       </div>
       <div class="card columns small-12 medium-6 large-3">
         <img class="thumbnail" src="${data.hits[1].recipe.image}">
         <h5>${data.hits[1].recipe.label}</h5>
-        <p>Recipe site: ${data.hits[1].recipe.source}</p>
+        <p class="recipeDesc">Recipe site: ${data.hits[1].recipe.source}</p>
         <a href="${data.hits[1].recipe.url}" target="_blank" class="button hollow small small-only-expanded">Get The Recipe</a>
       </div>
       <div class="card columns small-12 medium-6 large-3">
         <img class="thumbnail" src="${data.hits[2].recipe.image}">
         <h5>${data.hits[2].recipe.label}</h5>
-        <p>Recipe site: ${data.hits[2].recipe.source}</p>
+        <p class="recipeDesc">Recipe site: ${data.hits[2].recipe.source}</p>
         <a href="${data.hits[2].recipe.url}" target="_blank" class="button hollow small small-only-expanded">Get The Recipe</a>
       </div>
       <div class="card columns small-12 medium-6 large-3">
         <img class="thumbnail" src="${data.hits[3].recipe.image}">
         <h5>${data.hits[3].recipe.label}</h5>
-        <p>Recipe site: ${data.hits[3].recipe.source}</p>
+        <p class="recipeDesc">Recipe site: ${data.hits[3].recipe.source}</p>
         <a href="${data.hits[3].recipe.url}" target="blank" class="button hollow small small-only-expanded">Get The Recipe</a>
       </div>
     </div>
