@@ -104,8 +104,6 @@ let inputElement = document.querySelector('.search-input')
 let searchBtn = document.querySelector("#search")
 
 
-let searchBtn = document.querySelector('#search')
-
 //Recipe
 //Event listener for the search button
 searchBtn.addEventListener("click", () => {
@@ -152,7 +150,7 @@ function useApiData(data) {
         <img class="thumbnail" src="${data.hits[3].recipe.image}">
         <h5>${data.hits[3].recipe.label}</h5>
         <p>Recipe site: ${data.hits[3].recipe.source}</p>
-        <a href="${data.hits[3].recipe.url}" target="blank" class="button hollow small small-only-expanded">Get The Recipe</a>
+        <a href="${data.hits[3].recipe.url}" target="_blank" class="button hollow small small-only-expanded">Get The Recipe</a>
       </div>
     </div>
  `
