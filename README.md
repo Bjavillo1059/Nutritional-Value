@@ -11,8 +11,7 @@ Our new NutriVal app brings value to your everyday health by keeping proper reco
 
 
 Motivation for development? - Health improvement 
-User story - Always looking for sites that can tell you how much weight of a specific food would give you the ideal NutriVal you’re looking for
-# U ser want to search the 
+User story - Always looking for sites that can tell you how much weight of a specific food would give you the ideal NutriVal you’re looking for 
 
 # User want to see the food tyeps 
 NutriVal App helps its users to get the most out of their foods.
@@ -21,7 +20,7 @@ Food is something that everyone can relate to. It gives us energy, it provides n
 
 ## Deployment
 
-(https://github.com/Bjavillo1059/Nutritional-Value)
+[Deployed Page](https://github.com/Bjavillo1059/Nutritional-Value)
 
 <img src="./assets/img/Project Snippet.PNG" alt=" img of Project Snippet"/>
 
@@ -42,7 +41,7 @@ As User when NutriVal link is opened, a display will show the title "NutiVal" to
 - drop downlinks display the two specific subjects that link to descriptions
 - all dropdown items are linked to other sites for descriptions
 - these dropdown links are the subject of an article that are directly relayed for in the Types of Food and Food Groups
-    - website used for these breakdowns is (https://en.yestherapyhelps.com/the-12-types-of-nutrition-and-their-characteristics-12159)
+    - website used for these breakdowns is [yes, therapy article:](https://en.yestherapyhelps.com/the-12-types-of-nutrition-and-their-characteristics-12159)
 
     - Types of Food
         - Meats/Fish
