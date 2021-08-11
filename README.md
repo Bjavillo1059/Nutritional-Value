@@ -20,7 +20,7 @@ Food is something that everyone can relate to. It gives us energy, it provides n
 
 ## Deployment
 
-[Deployed Page](https://github.com/Bjavillo1059/Nutritional-Value)
+[Deployed Page](https://bjavillo1059.github.io/Nutritional-Value/)
 
 <img src="./assets/img/Project Snippet.PNG" alt=" img of Project Snippet"/>
 
