@@ -21,6 +21,8 @@ Food is something that everyone can relate to. It gives us energy, it provides n
 
 ## Deployment
 
+<img src="./assets/img/Project Snippet.PNG" alt=" img of Project Snippet"/>
+
 ## Technology Used
 
 - HTML   Brandon/Carina/Matthew
